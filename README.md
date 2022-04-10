@@ -1,11 +1,6 @@
-# Next.js Template
+# My Blog(v2)
 
-## 設定済み機能一覧
-
-- ESLint / Prettier
-- Husky
-- Renovate
-
+Next.js x MicroCMS x Chakra UIで作ったブログサイトです。
 
 ## セットアップ
 ```shell
