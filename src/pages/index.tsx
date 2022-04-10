@@ -1,12 +1,12 @@
 import { Box, Text } from '@chakra-ui/react'
 import { microCmsClient } from '@/libs/micro-cms-client'
+import { Blog } from '@/types/blog'
 import type { NextPage } from 'next'
 
-// TODO(mu-suke): blogListの型をAspidaで設定する
-const Home: NextPage<{ blogList: any }> = ({ blogList }) => {
+const Home: NextPage<{ blogList: Blog[] }> = ({ blogList }) => {
   return (
     <Box>
-      {blogList.map((blog: any) => {
+      {blogList.map((blog: Blog) => {
         return (
           <Box key={blog.id}>
             <Text>{blog.title}</Text>
