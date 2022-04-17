@@ -1,4 +1,5 @@
 import { Box, Text } from '@chakra-ui/react'
+import PostBody from '@/components/blog/PostBody'
 import { microCmsClient } from '@/libs/micro-cms-client'
 import { Blog } from '@/types/blog'
 import type { NextPage } from 'next'
@@ -10,11 +11,7 @@ const Home: NextPage<{ blogList: Blog[] }> = ({ blogList }) => {
         return (
           <Box key={blog.id}>
             <Text>{blog.title}</Text>
-            <Box
-              dangerouslySetInnerHTML={{
-                __html: `${blog.body}`,
-              }}
-            />
+            <PostBody body={blog.body} />
             <Text>{blog.updatedAt}</Text>
           </Box>
         )
