@@ -11,7 +11,7 @@ const Footer = () => {
     >
       <Container paddingY="0rem" paddingTop="1rem">
         <Box textAlign="center">
-          <Text as="small">© mu-suke.com</Text>
+          <Text as="small">© 2022, mu-suke.com</Text>
         </Box>
       </Container>
     </Box>

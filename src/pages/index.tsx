@@ -1,24 +1,18 @@
-import { Box, Text } from '@chakra-ui/react'
-import PostBody from '@/components/blog/PostBody'
+import { SimpleGrid } from '@chakra-ui/react'
 import Layout from '@/components/layout'
+import ArticleCard from '@/components/top/ArticleCard'
 import { microCmsClient } from '@/libs/micro-cms-client'
-import { Blog } from '@/types/blog'
+import { Article } from '@/types/article'
 import type { NextPage } from 'next'
 
-const Home: NextPage<{ blogList: Blog[] }> = ({ blogList }) => {
+const Home: NextPage<{ blogList: Article[] }> = ({ blogList }) => {
   return (
-    <Layout containerVariant={'default'}>
-      <Box>
-        {blogList.map((blog: Blog) => {
-          return (
-            <Box key={blog.id}>
-              <Text>{blog.title}</Text>
-              <PostBody body={blog.body} />
-              <Text>{blog.updatedAt}</Text>
-            </Box>
-          )
+    <Layout containerVariant={'lg'}>
+      <SimpleGrid columns={3} spacing={10}>
+        {blogList.map((blog: Article, index: number) => {
+          return <ArticleCard article={blog} key={index} />
         })}
-      </Box>
+      </SimpleGrid>
     </Layout>
   )
 }
