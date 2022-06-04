@@ -2,7 +2,7 @@ import { Container, Flex, Link, Image } from '@chakra-ui/react'
 import React from 'react'
 import { PROJECT_NAME } from '@/constants'
 
-const HEader: React.VFC = () => {
+const HEader: React.FC = () => {
   return (
     <>
       <Container variant="lg" paddingY="0rem" height="4rem">

@@ -3,7 +3,7 @@ import React from 'react'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 
-const Layout: React.VFC<{
+const Layout: React.FC<{
   containerVariant?: 'xs' | 'sm' | 'lg' | 'default'
   children: React.ReactNode
 }> = ({ containerVariant = 'default', children }) => {
