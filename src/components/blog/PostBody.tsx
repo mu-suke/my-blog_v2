@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 
-const PostBody: React.VFC<{ body: string }> = ({ body }) => {
+const PostBody: React.FC<{ body: string }> = ({ body }) => {
   return (
     <>
       <Box
