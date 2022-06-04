@@ -14,7 +14,7 @@ import { Article } from '@/types/article'
 type BodyOmitArticle = Omit<Article, 'body'>
 
 const ArticleCard: React.VFC<{ article: BodyOmitArticle }> = ({ article }) => {
-  const date = new Date(article.updatedAt).toLocaleDateString()
+  const date = new Date(article.updatedAt).toLocaleDateString('ja-JP')
   return (
     <>
       <LinkBox
