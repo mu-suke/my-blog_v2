@@ -7,7 +7,7 @@
   "rangeStrategy": "pin",
   "reviewers": ["mu-suke"],
   "reviewersSampleSize": 1,
-  "prConcurrentLimit": 5,
+  "prConcurrentLimit": 8,
   "packageRules": [
     {
       "packageNames": ["node", "npm"],
