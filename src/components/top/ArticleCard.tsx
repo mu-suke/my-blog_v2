@@ -7,6 +7,7 @@ import {
   LinkOverlay,
   Text,
 } from '@chakra-ui/react'
+import Link from 'next/link'
 import React from 'react'
 import { HiOutlineClock } from 'react-icons/hi'
 import { Article } from '@/types/article'
@@ -32,7 +33,9 @@ const ArticleCard: React.FC<{ article: BodyOmitArticle }> = ({ article }) => {
           objectFit={'cover'}
         />
         <Box p={'6'} flexGrow={1}>
-          <LinkOverlay href={'#'}>{article.title}</LinkOverlay>
+          <Link href={'/articles/[id]'} as={`/articles/${article.id}`} passHref>
+            <LinkOverlay>{article.title}</LinkOverlay>
+          </Link>
         </Box>
         <Flex pt={2} alignItems={'center'} justifyContent={'end'} pr={4} pb={2}>
           <Icon as={HiOutlineClock} mr={1} height={4} width={4} />
