@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Box, Text } from '@chakra-ui/react'
 import PostBody from '@/components/blog/PostBody'
+import PostHeader from '@/components/blog/PostHeader'
 import Layout from '@/components/layout'
 import { microCmsClient } from '@/libs/micro-cms-client'
 import { Article } from '@/types/article'
@@ -8,12 +8,9 @@ import type { NextPage } from 'next'
 
 const Article: NextPage<{ article: Article }> = ({ article }) => {
   return (
-    <Layout containerVariant={'default'}>
-      <Box>
-        <Text>{article.title}</Text>
-        <PostBody body={article.body} />
-        <Text>{article.updatedAt}</Text>
-      </Box>
+    <Layout containerVariant={'default'} isWhiteBg>
+      <PostHeader article={article} />
+      <PostBody body={article.body} />
     </Layout>
   )
 }
