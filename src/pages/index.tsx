@@ -8,7 +8,7 @@ import type { NextPage } from 'next'
 const Home: NextPage<{ blogList: Article[] }> = ({ blogList }) => {
   return (
     <Layout containerVariant={'lg'}>
-      <SimpleGrid columns={3} spacing={10}>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         {blogList.map((blog: Article, index: number) => {
           return <ArticleCard article={blog} key={index} />
         })}
