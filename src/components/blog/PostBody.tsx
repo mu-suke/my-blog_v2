@@ -11,8 +11,31 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
             mb: 4,
             listStyle: 'none',
           },
-          h1: { fontSize: '3xl', fontWeight: 'bold', color: 'primary.900' },
-          p: { fontSize: 'md', color: 'primary.900' },
+          'h1, h2, h3, h4, h5': {
+            fontWeight: 'bold',
+            color: 'gray.800',
+          },
+          // h1はタイトルで使用しているので実際は使われない
+          h1: {
+            fontSize: { base: '2xl', md: '3xl' },
+          },
+          h2: {
+            fontSize: { base: '3xl', md: '4xl' },
+            borderBottom: '2px solid #000',
+            mt: '40px',
+            mb: '20px',
+            pb: { base: '0.5rem', md: '0.625rem' },
+            lineHeight: '1.4',
+          },
+          h3: {
+            fontSize: { base: '2xl', md: '2xl' },
+            my: '28px',
+            lineHeight: '1.4',
+          },
+          'h4, h5': {
+            fontSize: 'xl',
+          },
+          p: { fontSize: 'md' },
           blockquote: {
             borderLeft: '3px solid',
             borderColor: 'primary.500',
@@ -31,7 +54,7 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
           },
           img: {
             w: '100%',
-            h: { base: 200, sm: 300, md: 400 },
+            h: { base: 200, md: 300 },
             objectFit: 'cover',
             borderRadius: 10,
           },
