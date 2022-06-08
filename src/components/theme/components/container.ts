@@ -4,8 +4,8 @@ export const Container = {
       maxW: 'container.md',
       paddingX: '1rem',
       paddingY: {
-        base: '2.5rem',
-        md: '4rem',
+        base: 0,
+        md: '1.5rem',
       },
     },
     lg: {

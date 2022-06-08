@@ -14,7 +14,7 @@ export const colors = {
     800: '#1f2937',
     900: '#111827',
   },
-  // pallete
+  // palette
   red: {
     50: '#fef2f2',
     100: '#fee2e2',
@@ -90,4 +90,5 @@ export const colors = {
     800: '#ffb700',
     900: '#ff8a00',
   },
+  bg: '#f3f3f3',
 }
