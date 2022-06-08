@@ -26,10 +26,11 @@ const ArticleCard: React.FC<{ article: BodyOmitArticle }> = ({ article }) => {
         flexDirection={'column'}
       >
         <Image
-          src={article.thumbnail_image.url}
+          src={`${article.thumbnail_image.url}?fm=webp`}
           alt={`${article.title}のサムネイル画像`}
           maxH={'160px'}
-          width={'100%'}
+          height={504}
+          width={960}
           objectFit={'cover'}
         />
         <Box p={'6'} flexGrow={1}>
