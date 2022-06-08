@@ -15,7 +15,9 @@ const HEader: React.FC = () => {
             <Image
               src="/images/vercel.svg"
               alt={PROJECT_NAME}
-              width={{ base: '100px', md: '140px' }}
+              objectFit={'cover'}
+              height={{ base: 6, md: 8 }}
+              width={'auto'}
             />
           </Link>
         </Flex>
