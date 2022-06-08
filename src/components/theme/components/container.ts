@@ -2,7 +2,7 @@ export const Container = {
   variants: {
     default: {
       maxW: 'container.md',
-      paddingX: '1rem',
+      paddingX: { base: '1rem', md: '1.5rem' },
       paddingY: {
         base: 0,
         md: '1.5rem',
