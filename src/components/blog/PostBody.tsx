@@ -21,7 +21,7 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
           },
           h2: {
             fontSize: { base: '3xl', md: '4xl' },
-            borderBottom: '2px solid #000',
+            borderBottom: '2px solid #1f2937',
             mt: '40px',
             mb: '20px',
             pb: { base: '0.5rem', md: '0.625rem' },
