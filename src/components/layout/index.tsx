@@ -5,10 +5,12 @@ import Header from '@/components/layout/Header'
 
 const Layout: React.FC<{
   containerVariant?: 'xs' | 'sm' | 'lg' | 'default'
+  isWhiteBg?: boolean
   children: React.ReactNode
-}> = ({ containerVariant = 'default', children }) => {
+}> = ({ containerVariant = 'default', isWhiteBg = false, children }) => {
   return (
     <Box
+      backgroundColor={'bg'}
       // Footerを下部に固定
       minHeight="100vh"
       position="relative"
@@ -16,7 +18,12 @@ const Layout: React.FC<{
       paddingBottom="4rem"
     >
       <Header />
-      <Container variant={containerVariant}>{children}</Container>
+      <Container
+        backgroundColor={isWhiteBg ? 'white' : ''}
+        variant={containerVariant}
+      >
+        {children}
+      </Container>
       <Footer />
     </Box>
   )
