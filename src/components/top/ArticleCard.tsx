@@ -20,6 +20,7 @@ const ArticleCard: React.FC<{ article: BodyOmitArticle }> = ({ article }) => {
     <>
       <LinkBox
         display={'flex'}
+        backgroundColor={'white'}
         borderWidth="1px"
         borderRadius="lg"
         overflow="hidden"
