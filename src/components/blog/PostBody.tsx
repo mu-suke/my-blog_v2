@@ -13,7 +13,7 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
           },
           'h1, h2, h3, h4, h5': {
             fontWeight: 'bold',
-            color: 'gray.800',
+            color: 'fontBlack',
           },
           // h1はタイトルで使用しているので実際は使われない
           h1: {
@@ -47,7 +47,7 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
           },
           li: {
             mb: 2,
-            color: 'primary.900',
+            color: 'fontBlack',
           },
           'pre code': {
             borderRadius: 10,
