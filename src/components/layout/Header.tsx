@@ -1,3 +1,4 @@
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Center, Container, Heading, Link, SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
 import NextLink from '@/components/elements/NextLink'
@@ -25,16 +26,20 @@ const Header: React.FC = () => {
               isExternal
               color={'gray.800'}
               _hover={{ textDecoration: 'none', opacity: '0.5' }}
+              display={'flex'}
+              alignItems={'center'}
             >
-              GitHub
+              GitHub <ExternalLinkIcon mx="0.25rem" />
             </Link>
             <Link
               href={'https://twitter.com/chelsea08ym'}
               isExternal
               color={'gray.800'}
               _hover={{ textDecoration: 'none', opacity: '0.5' }}
+              display={'flex'}
+              alignItems={'center'}
             >
-              Twitter
+              Twitter <ExternalLinkIcon ml={'0.25rem'} />
             </Link>
           </SimpleGrid>
         </Center>
