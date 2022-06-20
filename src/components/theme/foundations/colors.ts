@@ -91,4 +91,5 @@ export const colors = {
     900: '#ff8a00',
   },
   bg: '#f3f3f3',
+  fontBlack: 'gray.800',
 }
