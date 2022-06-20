@@ -2,6 +2,7 @@
 import { Box } from '@chakra-ui/react'
 import PostBody from '@/components/blog/PostBody'
 import PostHeader from '@/components/blog/PostHeader'
+import { Seo } from '@/components/elements/Seo'
 import Layout from '@/components/layout'
 import { microCmsClient } from '@/libs/micro-cms-client'
 import { Article } from '@/types/article'
@@ -9,19 +10,22 @@ import type { NextPage } from 'next'
 
 const Article: NextPage<{ article: Article }> = ({ article }) => {
   return (
-    <Layout containerVariant={'default'}>
-      <Box
-        backgroundColor={'white'}
-        px={{ base: '1rem', md: '1.5rem' }}
-        py={{
-          base: 0,
-          md: '1.5rem',
-        }}
-      >
-        <PostHeader article={article} />
-        <PostBody body={article.body} />
-      </Box>
-    </Layout>
+    <>
+      <Seo title={article.title} />
+      <Layout containerVariant={'default'}>
+        <Box
+          backgroundColor={'white'}
+          px={{ base: '1rem', md: '1.5rem' }}
+          py={{
+            base: 0,
+            md: '1.5rem',
+          }}
+        >
+          <PostHeader article={article} />
+          <PostBody body={article.body} />
+        </Box>
+      </Layout>
+    </>
   )
 }
 
