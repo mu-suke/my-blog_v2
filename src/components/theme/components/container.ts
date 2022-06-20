@@ -12,8 +12,8 @@ export const Container = {
       maxW: 'container.lg',
       paddingX: '1rem',
       paddingY: {
-        base: '2.5rem',
-        md: '4rem',
+        base: 0,
+        md: '1.5rem',
       },
     },
     sm: {
