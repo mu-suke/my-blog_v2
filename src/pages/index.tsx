@@ -9,7 +9,7 @@ import type { NextPage } from 'next'
 const Home: NextPage<{ blogList: Article[] }> = ({ blogList }) => {
   return (
     <>
-      <Seo title={'ブログ一覧'} />
+      <Seo />
       <Layout containerVariant={'lg'}>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
           {blogList.map((blog: Article, index: number) => {
