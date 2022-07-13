@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
-  "baseBranches": ["main"],
+  "baseBranches": ["staging"],
   "timezone": "Asia/Tokyo",
   "schedule": ["every weekend"],
   "labels": ["renovate"],
@@ -15,7 +15,8 @@
     },
     {
       "groupName": "Next.js families",
-      "matchPackagePatterns": ["next"]
+      "matchPackagePatterns": ["next"],
+      "matchPackageNames": ["eslint-config-next"]
     },
     {
       "groupName": "Linter families",
