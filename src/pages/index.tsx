@@ -30,6 +30,7 @@ export const getStaticProps = async () => {
     props: {
       blogList: data.contents,
     },
+    revalidate: 86400,
   }
 }
 
