@@ -19,7 +19,6 @@ const GA: React.FC = () => {
                 gtag('js', new Date());
                 gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
                   page_path: window.location.pathname,
-                  debug_mode:true
                 });`,
         }}
       />
