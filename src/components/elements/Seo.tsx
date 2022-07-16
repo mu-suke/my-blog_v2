@@ -22,7 +22,7 @@ const Seo: React.FC<{
   // defaultは、_app.jsの DefaultSEO で設定する
   const commonTitle = META_TITLE
 
-  const title = meta.title ? `${meta.title}｜${commonTitle}` : undefined
+  const title = meta.title ? `${meta.title}｜${commonTitle}` : commonTitle
   const description = meta.description ? meta.description : undefined
 
   let ogTitle = undefined
