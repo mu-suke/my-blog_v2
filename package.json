@@ -24,9 +24,9 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "2.0.4",
-    "@chakra-ui/react": "2.2.4",
-    "@emotion/react": "11.9.3",
-    "@emotion/styled": "11.9.3",
+    "@chakra-ui/react": "2.2.6",
+    "@emotion/react": "11.10.0",
+    "@emotion/styled": "11.10.0",
     "@next/bundle-analyzer": "12.2.2",
     "framer-motion": "6.5.1",
     "microcms-js-sdk": "2.0.0",
