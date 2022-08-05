@@ -15,6 +15,7 @@ const Article: NextPage<{ article: Article }> = ({ article }) => {
       <Seo
         title={article.title}
         ogType={'article'}
+        ogImageUrl={article.thumbnail_image.url}
         twitterCardType={META_TWITTER_CARD_TYPE}
       />
       <Layout containerVariant={'default'}>
