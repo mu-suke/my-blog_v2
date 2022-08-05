@@ -29,7 +29,11 @@
     {
       "groupName": "Chakra-UI families",
       "matchPackagePatterns": ["chakra"],
-      "matchPackageNames": ["@emotion/react", "@emotion/styled", "framer-motion"]
+      "matchPackageNames": [
+        "@emotion/react",
+        "@emotion/styled",
+        "framer-motion"
+      ]
     },
     {
       "groupName": "Typescript families",
