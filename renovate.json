@@ -27,6 +27,11 @@
       "matchPackagePatterns": ["react", "emotion"]
     },
     {
+      "groupName": "Chakra-UI families",
+      "matchPackagePatterns": ["chakra"],
+      "matchPackageNames": ["@emotion/react", "@emotion/styled", "framer-motion"]
+    },
+    {
       "groupName": "Typescript families",
       "matchPackageNames": ["typescript", "tsconfig-paths", "ts-loader"]
     },
