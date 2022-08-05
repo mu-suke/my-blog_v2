@@ -4,6 +4,7 @@ import PostBody from '@/components/blog/PostBody'
 import PostHeader from '@/components/blog/PostHeader'
 import { Seo } from '@/components/elements/Seo'
 import Layout from '@/components/layout'
+import { META_TWITTER_CARD_TYPE } from '@/constants/meta'
 import { microCmsClient } from '@/libs/micro-cms-client'
 import { Article } from '@/types/article'
 import type { NextPage } from 'next'
@@ -11,7 +12,12 @@ import type { NextPage } from 'next'
 const Article: NextPage<{ article: Article }> = ({ article }) => {
   return (
     <>
-      <Seo title={article.title} />
+      <Seo
+        title={article.title}
+        ogType={'article'}
+        ogImageUrl={article.thumbnail_image.url}
+        twitterCardType={META_TWITTER_CARD_TYPE}
+      />
       <Layout containerVariant={'default'}>
         <Box
           backgroundColor={'white'}
