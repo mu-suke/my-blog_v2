@@ -1,8 +1,8 @@
 import { NextSeo } from 'next-seo'
-import Head from 'next/head'
 import * as React from 'react'
 import { META_TITLE } from '@/constants'
 
+// パラメータの追加が必要であれば node_module/next-seo/lib/types.d.ts の NextSeoProps を参照して追加する
 const Seo: React.FC<{
   // base
   title?: string
@@ -15,10 +15,8 @@ const Seo: React.FC<{
   ogDescription?: string
   ogImageUrl?: string
   ogType?: 'article' | 'blog' | 'website'
-  // Twitter (未設定の場合はSNS側を参照します。)
-  twitterTitle?: string
-  twitterDescription?: string
-  twitterImageUrl?: string
+  twitterHandle?: string
+  twitterSite?: string
   twitterCardType?: 'summary' | 'summary_large_image'
 }> = meta => {
   // defaultは、_app.jsの DefaultSEO で設定する
@@ -48,30 +46,9 @@ const Seo: React.FC<{
 
   const ogType = meta.ogType ? meta.ogType : undefined
 
-  let twitterTitle = undefined
-  if (meta.twitterTitle) {
-    twitterTitle = `${meta.twitterTitle}｜${commonTitle}`
-  } else if (ogTitle) {
-    twitterTitle = ogTitle
-  } else if (meta.title) {
-    twitterTitle = `${meta.title}｜${commonTitle}`
-  }
+  const twitterHandle = meta.twitterHandle ? meta.twitterHandle : undefined
 
-  let twitterDescription = undefined
-  if (meta.twitterDescription) {
-    twitterDescription = meta.twitterDescription
-  } else if (ogDescription) {
-    twitterDescription = ogDescription
-  } else if (meta.description) {
-    twitterDescription = meta.description
-  }
-
-  let twitterImage = undefined
-  if (meta.twitterImageUrl) {
-    twitterImage = meta.twitterImageUrl
-  } else if (meta.ogImageUrl) {
-    twitterImage = meta.ogImageUrl
-  }
+  const twitterSite = meta.twitterSite ? meta.twitterSite : undefined
 
   const twitterCardType = meta.twitterCardType
     ? meta.twitterCardType
@@ -90,18 +67,12 @@ const Seo: React.FC<{
           images: ogImage,
           type: ogType,
         }}
+        twitter={{
+          handle: twitterHandle,
+          site: twitterSite,
+          cardType: twitterCardType,
+        }}
       />
-      {/* NextSeoだと twitter に対応できないので Head を追加 */}
-      <Head>
-        {twitterTitle && <meta name="twitter:title" content={twitterTitle} />}
-        {twitterDescription && (
-          <meta name="twitter:description" content={twitterDescription} />
-        )}
-        {twitterImage && <meta name="twitter:image" content={twitterImage} />}
-        {twitterCardType && (
-          <meta name="twitter:card" content={twitterCardType} />
-        )}
-      </Head>
     </>
   )
 }
