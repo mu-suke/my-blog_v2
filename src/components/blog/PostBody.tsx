@@ -55,6 +55,11 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
             objectFit: 'cover',
             borderRadius: 10,
           },
+          '.scroll-table': {
+            display: 'block',
+            overflowX: 'scroll',
+            whiteSpace: 'nowrap',
+          },
           table: {
             width: '100%',
             textAlign: 'center',
