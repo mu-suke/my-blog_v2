@@ -23,8 +23,8 @@ const Article: NextPage<{ article: Article }> = ({ article }) => {
           backgroundColor={'white'}
           px={{ base: '1rem', md: '1.5rem' }}
           py={{
-            base: 0,
-            md: '1.5rem',
+            base: 4,
+            md: 6,
           }}
         >
           <PostHeader article={article} />
