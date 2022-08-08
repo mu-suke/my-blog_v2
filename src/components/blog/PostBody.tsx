@@ -7,10 +7,6 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
       <Box
         mt={4}
         sx={{
-          '*': {
-            mb: 4,
-            listStyle: 'none',
-          },
           'h1, h2, h3, h4, h5': {
             fontWeight: 'bold',
             color: 'fontBlack',
@@ -46,6 +42,7 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
             color: 'primary.900',
           },
           li: {
+            listStyle: 'none',
             mb: 2,
             color: 'fontBlack',
           },
@@ -57,6 +54,24 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
             h: { base: 200, md: 300 },
             objectFit: 'cover',
             borderRadius: 10,
+          },
+          table: {
+            width: '100%',
+            textAlign: 'center',
+            borderCollapse: 'collapse',
+            borderSpacing: 0,
+            border: '1px solid #ccc',
+          },
+          th: {
+            backgroundColor: 'gray.100',
+            border: '1px solid #ccc',
+            verticalAlign: 'middle',
+            padding: 2,
+          },
+          td: {
+            border: '1px solid #ccc',
+            verticalAlign: 'middle',
+            padding: 2,
           },
         }}
       >

@@ -49,9 +49,20 @@ export const getStaticProps = async (context: any) => {
     contentId: id,
   })
 
+  // リッチエディタとhtmlのどちらかが送られてくるためbodyを整形
+  // @see https://mu-suke.microcms.io/apis/blog/settings/model
+  const body = data.body
+    .map((b: any) => {
+      const richEditor = b.richEditor ?? ''
+      const html = b.html ?? ''
+      return richEditor + html
+    })
+    .join('')
+  const article = { ...data, body: body }
+
   return {
     props: {
-      article: data,
+      article,
     },
   }
 }
