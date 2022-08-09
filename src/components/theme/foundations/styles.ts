@@ -1,7 +1,7 @@
 // グローバルスタイルの記述
 export const styles = {
   global: {
-    html: {
+    'html, body': {
       backgroundColor: 'bg',
     },
   },
