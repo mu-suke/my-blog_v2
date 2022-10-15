@@ -28,7 +28,7 @@
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
     "@next/bundle-analyzer": "12.3.1",
-    "framer-motion": "6.5.1",
+    "framer-motion": "7.5.3",
     "microcms-js-sdk": "2.2.1",
     "next": "12.3.1",
     "next-seo": "5.5.0",
