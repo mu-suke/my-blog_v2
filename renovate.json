@@ -42,6 +42,10 @@
     {
       "groupName": "MicroCMS families",
       "matchPackagePatterns": ["microcms"]
+    },
+    {
+      "groupName": "Testing Library React",
+      "matchPackagePatterns": ["@testing-library"]
     }
   ]
 }
