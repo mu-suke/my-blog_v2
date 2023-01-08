@@ -44,7 +44,12 @@ const ArticleCard: React.FC<{ article: BodyOmitArticle }> = ({ article }) => {
             <LinkOverlay>{article.title}</LinkOverlay>
           </NextLink>
         </Box>
-        <Flex alignItems={'end'} justifyContent={'space-evenly'} pr={4} pb={2}>
+        <Flex
+          alignItems={'center'}
+          justifyContent={'space-evenly'}
+          pr={4}
+          pb={2}
+        >
           <HStack>
             <Icon as={HiOutlinePencil} mr={1} height={4} width={4} />
             <Text display={'inline-block'}>{createdAt}</Text>
