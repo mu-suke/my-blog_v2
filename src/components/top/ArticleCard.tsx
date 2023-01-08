@@ -1,6 +1,7 @@
 import {
   Box,
   Flex,
+  HStack,
   Icon,
   Image,
   LinkBox,
@@ -8,14 +9,15 @@ import {
   Text,
 } from '@chakra-ui/react'
 import React from 'react'
-import { HiOutlineClock } from 'react-icons/hi'
+import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
 import NextLink from '@/components/elements/NextLink'
 import { Article } from '@/types/article'
 
 type BodyOmitArticle = Omit<Article, 'body'>
 
 const ArticleCard: React.FC<{ article: BodyOmitArticle }> = ({ article }) => {
-  const date = new Date(article.updatedAt).toLocaleDateString('ja-JP')
+  const createdAt = new Date(article.createdAt).toLocaleDateString('ja-JP')
+  const updatedAt = new Date(article.updatedAt).toLocaleDateString('ja-JP')
   return (
     <>
       <LinkBox
@@ -42,9 +44,15 @@ const ArticleCard: React.FC<{ article: BodyOmitArticle }> = ({ article }) => {
             <LinkOverlay>{article.title}</LinkOverlay>
           </NextLink>
         </Box>
-        <Flex pt={2} alignItems={'center'} justifyContent={'end'} pr={4} pb={2}>
-          <Icon as={HiOutlineClock} mr={1} height={4} width={4} />
-          <Text display={'inline-block'}>{date}</Text>
+        <Flex alignItems={'end'} justifyContent={'space-evenly'} pr={4} pb={2}>
+          <HStack>
+            <Icon as={HiOutlinePencil} mr={1} height={4} width={4} />
+            <Text display={'inline-block'}>{createdAt}</Text>
+          </HStack>
+          <HStack>
+            <Icon as={HiOutlineClock} mr={1} height={4} width={4} />
+            <Text display={'inline-block'}>{updatedAt}</Text>
+          </HStack>
         </Flex>
       </LinkBox>
     </>
