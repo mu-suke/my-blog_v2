@@ -1,10 +1,19 @@
-import { Box, Flex, Heading, Icon, Image, Text } from '@chakra-ui/react'
+import {
+  Box,
+  Heading,
+  HStack,
+  Icon,
+  Image,
+  Text,
+  VStack,
+} from '@chakra-ui/react'
 import React from 'react'
-import { HiOutlineClock } from 'react-icons/hi'
+import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
 import { Article } from '@/types/article'
 
 const PostHeader: React.FC<{ article: Article }> = ({ article }) => {
-  const date = new Date(article.updatedAt).toLocaleDateString('ja-JP')
+  const createdAt = new Date(article.createdAt).toLocaleDateString('ja-JP')
+  const updatedAt = new Date(article.updatedAt).toLocaleDateString('ja-JP')
   return (
     <>
       <Box pb={4}>
@@ -21,16 +30,23 @@ const PostHeader: React.FC<{ article: Article }> = ({ article }) => {
         <Heading as="h1" size={{ base: '2xl', md: '3xl' }} py={2.5}>
           {article.title}
         </Heading>
-        <Flex
+        <VStack
           pt={2}
-          alignItems={'center'}
-          justifyContent={'start'}
+          alignItems={'start'}
+          justifyContent={'center'}
           pr={4}
           pb={2}
+          spacing={0}
         >
-          <Icon as={HiOutlineClock} mr={1} height={4} width={4} />
-          <Text display={'inline-block'}>{date}</Text>
-        </Flex>
+          <HStack>
+            <Icon as={HiOutlinePencil} mr={1} height={4} width={4} />
+            <Text display={'inline-block'}>{createdAt}</Text>
+          </HStack>
+          <HStack>
+            <Icon as={HiOutlineClock} mr={1} height={4} width={4} />
+            <Text display={'inline-block'}>{updatedAt}</Text>
+          </HStack>
+        </VStack>
       </Box>
     </>
   )
