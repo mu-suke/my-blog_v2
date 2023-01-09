@@ -5,11 +5,11 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
   return (
     <>
       <Box
-        mt={4}
+        pb={4}
         sx={{
           'h1, h2, h3, h4, h5': {
             fontWeight: 'bold',
-            color: 'fontBlack',
+            color: 'system.black',
           },
           // h1はタイトルで使用しているので実際は使われない
           h1: {
@@ -17,21 +17,21 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
           },
           h2: {
             fontSize: { base: '3xl', md: '4xl' },
-            borderBottom: '2px solid #1f2937',
+            borderBottom: '1px solid #CDCDD0',
             mt: '40px',
             mb: '20px',
-            pb: { base: '0.5rem', md: '0.625rem' },
-            lineHeight: '1.4',
+            pb: 0.5,
+            lineHeight: '1.5',
           },
           h3: {
             fontSize: { base: '2xl', md: '2xl' },
             my: '28px',
-            lineHeight: '1.4',
+            lineHeight: '1.5',
           },
           'h4, h5': {
             fontSize: 'xl',
           },
-          p: { fontSize: 'md' },
+          p: { fontSize: 'md', lineHeight: '1.9' },
           blockquote: {
             borderLeft: '3px solid',
             borderColor: 'primary.500',
@@ -42,9 +42,9 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
             color: 'primary.900',
           },
           li: {
-            listStyle: 'none',
+            listStyle: 'inside',
             mb: 2,
-            color: 'fontBlack',
+            color: 'system.black',
           },
           'pre code': {
             borderRadius: 10,
