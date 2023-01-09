@@ -1,6 +1,11 @@
 export const colors = {
-  black: '#000',
-  white: '#fff',
+  system: {
+    white: '#FFFFFF', //メインバックグラウンドと白テキストに使用
+    lightgray: '#F2F4F5', //線や注釈等のエリアに使用する
+    gray: '#CDCDD0', //アイコンやネガティブボタンに使用
+    darkgray: '#BCBCBC', //サブテキストに使用
+    black: '#333333', //サブテキストに使用
+  },
   // gray
   gray: {
     50: '#f9fafb',
