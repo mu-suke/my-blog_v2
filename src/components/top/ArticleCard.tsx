@@ -31,7 +31,6 @@ const ArticleCard: React.FC<{ article: BodyOmitArticle }> = ({ article }) => {
           src={`${article.thumbnail_image.url}?fm=webp`}
           alt={`「${article.title}」のサムネイル画像`}
           maxH={'160px'}
-          height={504}
           width={960}
           objectFit={'cover'}
         />

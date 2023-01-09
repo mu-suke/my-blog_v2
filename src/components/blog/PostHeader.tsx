@@ -20,7 +20,6 @@ const PostHeader: React.FC<{ article: Article }> = ({ article }) => {
         <Image
           src={`${article.thumbnail_image.url}?fm=webp`}
           alt={`「${article.title}」のサムネイル画像`}
-          height={504}
           width={960}
           maxHeight={{ base: '190px', sm: '260px', md: '340px' }}
           objectFit={'cover'}
