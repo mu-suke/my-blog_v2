@@ -17,7 +17,7 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
           },
           h2: {
             fontSize: { base: '3xl', md: '4xl' },
-            borderBottom: '1px solid #CDCDD0',
+            borderBottom: '2px solid #CDCDD0',
             mt: '40px',
             mb: '20px',
             pb: 0.5,
@@ -41,10 +41,12 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
             fontWeight: 'bold',
             color: 'primary.900',
           },
+          ul: {
+            pl: 6,
+          },
           li: {
-            listStyle: 'inside',
-            mb: 2,
             color: 'system.black',
+            lineHeight: '1.9',
           },
           'pre code': {
             borderRadius: 10,
