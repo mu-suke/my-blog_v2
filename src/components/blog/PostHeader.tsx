@@ -38,12 +38,16 @@ const PostHeader: React.FC<{ article: Article }> = ({ article }) => {
           spacing={0}
         >
           <HStack>
-            <Icon as={HiOutlinePencil} mr={1} height={4} width={4} />
-            <Text display={'inline-block'}>{createdAt}</Text>
+            <Icon as={HiOutlinePencil} color={'system.black'} />
+            <Text display={'inline-block'} size={'sm'}>
+              {createdAt}
+            </Text>
           </HStack>
           <HStack>
-            <Icon as={HiOutlineClock} mr={1} height={4} width={4} />
-            <Text display={'inline-block'}>{updatedAt}</Text>
+            <Icon as={HiOutlineClock} color={'system.black'} />
+            <Text display={'inline-block'} size={'sm'}>
+              {updatedAt}
+            </Text>
           </HStack>
         </VStack>
       </Box>
