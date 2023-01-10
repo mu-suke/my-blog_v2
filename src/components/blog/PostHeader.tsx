@@ -11,7 +11,10 @@ import React from 'react'
 import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
 import { Article } from '@/types/article'
 
-const PostHeader: React.FC<{ article: Article }> = ({ article }) => {
+const PostHeader: React.FC<{ article: Article; isPreview: boolean }> = ({
+  article,
+  isPreview,
+}) => {
   const createdAt = new Date(article.createdAt).toLocaleDateString('ja-JP')
   const updatedAt = new Date(article.updatedAt).toLocaleDateString('ja-JP')
   return (
@@ -37,6 +40,11 @@ const PostHeader: React.FC<{ article: Article }> = ({ article }) => {
           pb={2}
           spacing={0}
         >
+          {isPreview && (
+            <Text fontWeight={'bold'} color={'red.500'}>
+              現在プレビューモードで閲覧中です
+            </Text>
+          )}
           <HStack>
             <Icon as={HiOutlinePencil} color={'system.black'} />
             <Text display={'inline-block'} size={'sm'}>

@@ -52,8 +52,6 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
             borderRadius: 10,
           },
           img: {
-            w: '100%',
-            h: { base: 200, md: 300 },
             objectFit: 'cover',
             borderRadius: 10,
           },
