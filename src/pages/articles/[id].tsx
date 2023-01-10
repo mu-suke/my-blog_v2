@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Box } from '@chakra-ui/react'
+import { MicroCMSQueries } from 'microcms-js-sdk'
 import PostBody from '@/components/blog/PostBody'
 import PostHeader from '@/components/blog/PostHeader'
 import { Seo } from '@/components/elements/Seo'
@@ -7,9 +8,12 @@ import Layout from '@/components/layout'
 import { META_TWITTER_CARD_TYPE } from '@/constants/meta'
 import { microCmsClient } from '@/libs/micro-cms-client'
 import { Article } from '@/types/article'
-import type { NextPage } from 'next'
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
-const Article: NextPage<{ article: Article }> = ({ article }) => {
+const Article: NextPage<{ article: Article; isPreview: boolean }> = ({
+  article,
+  isPreview,
+}) => {
   return (
     <>
       <Seo
@@ -27,7 +31,7 @@ const Article: NextPage<{ article: Article }> = ({ article }) => {
             md: 6,
           }}
         >
-          <PostHeader article={article} />
+          <PostHeader article={article} isPreview={isPreview} />
           <PostBody body={article.body} />
         </Box>
       </Layout>
@@ -35,18 +39,27 @@ const Article: NextPage<{ article: Article }> = ({ article }) => {
   )
 }
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const data: any = await microCmsClient.get({ endpoint: 'blog' })
 
   const paths = data.contents.map((content: any) => `/articles/${content.id}`)
   return { paths, fallback: 'blocking' }
 }
 
-export const getStaticProps = async (context: any) => {
+export const getStaticProps: GetStaticProps = async (context: any) => {
   const id = context.params.id
+  const draftKey = context.previewData
+    ? (context.previewData.draftKey as string)
+    : undefined
+  const isPreview = !!draftKey
+  const microCMSQueries = draftKey
+    ? ({ queries: { draftKey } } as MicroCMSQueries)
+    : undefined
+
   const data = await microCmsClient.get({
     endpoint: 'blog',
     contentId: id,
+    queries: microCMSQueries,
   })
 
   // リッチエディタとhtmlのどちらかが送られてくるためbodyを整形
@@ -63,6 +76,7 @@ export const getStaticProps = async (context: any) => {
   return {
     props: {
       article,
+      isPreview,
     },
   }
 }
