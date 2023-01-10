@@ -9,7 +9,7 @@ const preview = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   const data = await microCmsClient.get({
-    endpoint: 'post',
+    endpoint: 'blog',
     contentId: slug,
     queries: {
       draftKey,
