@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
     : undefined
   const isPreview = !!draftKey
   const microCMSQueries = draftKey
-    ? ({ queries: { draftKey } } as MicroCMSQueries)
+    ? ({ draftKey: draftKey } as MicroCMSQueries)
     : undefined
 
   const data = await microCmsClient.get({
