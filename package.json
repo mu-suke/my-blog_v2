@@ -1,6 +1,9 @@
 {
   "name": "nextjs_template",
   "version": "0.1.0",
+  "engines": {
+    "node": "18.12.1"
+  },
   "private": true,
   "scripts": {
     "prepare": "husky install",
