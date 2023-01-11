@@ -4,7 +4,7 @@ export const colors = {
     lightgray: '#F2F4F5', //線や注釈等のエリアに使用する
     gray: '#CDCDD0', //アイコンやネガティブボタンに使用
     darkgray: '#BCBCBC', //サブテキストに使用
-    black: '#333333', //サブテキストに使用
+    black: '#333333', //メインテキストに使用
   },
   // gray
   gray: {
