@@ -1,4 +1,7 @@
 export const Heading = {
+  baseStyle: {
+    color: 'system.black',
+  },
   sizes: {
     xs: {
       fontSize: 'xs',

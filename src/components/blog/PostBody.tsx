@@ -31,7 +31,7 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
           'h4, h5': {
             fontSize: 'xl',
           },
-          p: { fontSize: 'md', lineHeight: '1.9' },
+          p: { fontSize: 'md', lineHeight: '1.9', color: 'system.black' },
           blockquote: {
             borderLeft: '3px solid',
             borderColor: 'primary.500',

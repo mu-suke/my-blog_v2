@@ -40,7 +40,7 @@ const ArticleCard: React.FC<{ article: BodyOmitArticle }> = ({ article }) => {
             as={`/articles/${article.id}`}
             passHref
           >
-            <LinkOverlay>{article.title}</LinkOverlay>
+            <LinkOverlay color={'system.black'}>{article.title}</LinkOverlay>
           </NextLink>
         </Box>
         <Flex

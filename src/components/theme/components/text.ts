@@ -1,8 +1,8 @@
 export const Text = {
+  baseStyle: {
+    color: 'system.black',
+  },
   sizes: {
-    baseStyle: {
-      color: 'system.black',
-    },
     xs: {
       fontSize: 'xs',
       lineHeight: '1rem',
