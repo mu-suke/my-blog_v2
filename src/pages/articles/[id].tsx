@@ -62,8 +62,6 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
     queries: microCMSQueries,
   })
 
-  console.log({ isPreview })
-
   // リッチエディタとhtmlのどちらかが送られてくるためbodyを整形
   // @see https://mu-suke.microcms.io/apis/blog/settings/model
   const body = data.body
