@@ -78,6 +78,13 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
             verticalAlign: 'middle',
             padding: 2,
           },
+          code: {
+            backgroundColor: 'gray.100',
+            borderRadius: 5,
+            display: 'block',
+            overflowX: 'scroll',
+            w: '100%',
+          },
         }}
       >
         <Box
