@@ -1,4 +1,11 @@
 export const Link = {
+  baseStyle: {
+    color: 'system.black',
+    _hover: {
+      textDecoration: 'none',
+      opacity: '0.5',
+    },
+  },
   sizes: {
     xs: {
       fontSize: 'xs',
@@ -52,13 +59,5 @@ export const Link = {
       fontSize: '9xl',
       lineHeight: 1,
     },
-  },
-  variants: {
-    default: {
-      color: 'blue.500',
-    },
-  },
-  defaultProps: {
-    variant: 'default',
   },
 }

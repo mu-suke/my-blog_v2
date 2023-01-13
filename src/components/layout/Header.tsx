@@ -10,7 +10,7 @@ const Header: React.FC = () => {
       <Container variant="lg" paddingY="0rem">
         <Center flexDirection={'column'} py={'1rem'}>
           <NextLink href="/" passHref>
-            <Link color={'fontBlack'} _hover={{ textDecoration: 'none' }}>
+            <Link>
               <Heading as="h1" size={'2xl'}>
                 むーすけのブログ
               </Heading>
@@ -24,8 +24,6 @@ const Header: React.FC = () => {
             <Link
               href={'https://github.com/mu-suke'}
               isExternal
-              color={'fontBlack'}
-              _hover={{ textDecoration: 'none', opacity: '0.5' }}
               display={'flex'}
               alignItems={'center'}
             >
@@ -34,8 +32,6 @@ const Header: React.FC = () => {
             <Link
               href={'https://twitter.com/chelsea08ym'}
               isExternal
-              color={'fontBlack'}
-              _hover={{ textDecoration: 'none', opacity: '0.5' }}
               display={'flex'}
               alignItems={'center'}
             >
