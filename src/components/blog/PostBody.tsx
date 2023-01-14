@@ -17,7 +17,8 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
           },
           h2: {
             fontSize: { base: '3xl', md: '4xl' },
-            borderBottom: '2px solid #CDCDD0',
+            borderBottom: '2px solid',
+            borderColor: 'system.gray',
             mt: '40px',
             mb: '20px',
             pb: 0.5,
@@ -34,7 +35,7 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
           p: { fontSize: 'md', lineHeight: '1.9', color: 'system.black' },
           blockquote: {
             borderLeft: '3px solid',
-            borderColor: 'primary.500',
+            borderColor: 'system.gray',
             pl: 4,
           },
           a: {
@@ -49,7 +50,15 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
             lineHeight: '1.9',
           },
           'pre code': {
+            backgroundColor: '#2f3232',
             borderRadius: 10,
+            color: 'system.lightgray',
+            display: 'block',
+            overflowX: 'scroll',
+            minWidth: '100%',
+            w: '100%',
+            px: 4,
+            py: 3,
           },
           img: {
             objectFit: 'cover',
@@ -79,11 +88,11 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
             padding: 2,
           },
           code: {
-            backgroundColor: 'gray.100',
+            backgroundColor: 'rgba(33, 90, 260, 0.07)',
+            fontSize: 'sm',
+            px: '.4em',
+            py: '.2em',
             borderRadius: 5,
-            display: 'block',
-            overflowX: 'scroll',
-            w: '100%',
           },
         }}
       >
