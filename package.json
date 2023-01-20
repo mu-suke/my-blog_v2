@@ -31,6 +31,7 @@
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
     "@next/bundle-analyzer": "13.1.3",
+    "date-fns": "^2.29.3",
     "framer-motion": "7.5.3",
     "microcms-js-sdk": "2.2.1",
     "next": "13.1.3",
