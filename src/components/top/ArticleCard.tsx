@@ -3,19 +3,21 @@ import {
   Flex,
   HStack,
   Icon,
-  Image,
   LinkBox,
   LinkOverlay,
   Text,
 } from '@chakra-ui/react'
+import NextImage from 'next/image'
 import React from 'react'
 import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
 import NextLink from '@/components/elements/NextLink'
 import { Article } from '@/types/article'
 
-type BodyOmitArticle = Omit<Article, 'body'>
+type ArticleOmittedBody = Omit<Article, 'body'>
 
-const ArticleCard: React.FC<{ article: BodyOmitArticle }> = ({ article }) => {
+const ArticleCard: React.FC<{ article: ArticleOmittedBody }> = ({
+  article,
+}) => {
   const createdAt = new Date(article.createdAt).toLocaleDateString('ja-JP')
   const updatedAt = new Date(article.updatedAt).toLocaleDateString('ja-JP')
   return (
@@ -27,12 +29,11 @@ const ArticleCard: React.FC<{ article: BodyOmitArticle }> = ({ article }) => {
         overflow="hidden"
         flexDirection={'column'}
       >
-        <Image
+        <NextImage
           src={`${article.thumbnail_image.url}?fm=webp`}
           alt={`「${article.title}」のサムネイル画像`}
-          maxH={'160px'}
           width={960}
-          objectFit={'cover'}
+          height={480}
         />
         <Box p={'6'} flexGrow={1}>
           <NextLink
