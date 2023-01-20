@@ -1,7 +1,7 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Center, Container, Heading, Link, SimpleGrid } from '@chakra-ui/react'
+import NextLink from 'next/link'
 import React from 'react'
-import NextLink from '@/components/elements/NextLink'
 
 const Header: React.FC = () => {
   // TODO(mu-suke): カテゴリやプロフィールができたらSimpleGridのcolumnsを変更する
@@ -9,13 +9,11 @@ const Header: React.FC = () => {
     <>
       <Container variant="lg" paddingY="0rem">
         <Center flexDirection={'column'} py={'1rem'}>
-          <NextLink href="/" passHref>
-            <Link>
-              <Heading as="h1" size={'2xl'}>
-                むーすけのブログ
-              </Heading>
-            </Link>
-          </NextLink>
+          <Link as={NextLink} href={'/'}>
+            <Heading as="h1" size={'2xl'}>
+              むーすけのブログ
+            </Heading>
+          </Link>
           <SimpleGrid
             columns={{ base: 2, md: 2 }}
             spacing={{ base: 4, md: 8 }}
