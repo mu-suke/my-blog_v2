@@ -1,9 +1,8 @@
-import { format } from 'date-fns'
-import ja from 'date-fns/locale/ja'
+import { format, utcToZonedTime } from 'date-fns-tz'
 
-export const formatDate = (targetFormat: string, date: string) => {
-  const targetDate = new Date(date)
+export const formatDateJst = (targetFormat: string, date: string) => {
+  const targetDate = utcToZonedTime(date, 'Asia/Tokyo')
   return format(targetDate, targetFormat, {
-    locale: ja,
+    timeZone: 'Asia/Tokyo',
   })
 }

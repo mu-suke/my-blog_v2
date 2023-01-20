@@ -4,15 +4,15 @@ import NextLink from 'next/link'
 import React from 'react'
 import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
 import { Article } from '@/types/article'
-import { formatDate } from '@/utils/formatDate'
+import { formatDateJst } from '@/utils/formatDate'
 
 type ArticleOmittedBody = Omit<Article, 'body'>
 
 const ArticleCard: React.FC<{ article: ArticleOmittedBody }> = ({
   article,
 }) => {
-  const createdAt = formatDate('yyyy/MM/dd', article.createdAt)
-  const updatedAt = formatDate('yyyy/MM/dd', article.updatedAt)
+  const createdAt = formatDateJst('yyyy/MM/dd', article.createdAt)
+  const updatedAt = formatDateJst('yyyy/MM/dd', article.updatedAt)
   return (
     <>
       <Box
