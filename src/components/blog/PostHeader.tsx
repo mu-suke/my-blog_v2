@@ -3,13 +3,14 @@ import NextImage from 'next/image'
 import React from 'react'
 import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
 import { Article } from '@/types/article'
+import { formatDate } from '@/utils/formatDate'
 
 const PostHeader: React.FC<{ article: Article; isPreview: boolean }> = ({
   article,
   isPreview,
 }) => {
-  const createdAt = new Date(article.createdAt).toLocaleDateString('ja-JP')
-  const updatedAt = new Date(article.updatedAt).toLocaleDateString('ja-JP')
+  const createdAt = formatDate('yyyy/MM/dd', article.createdAt)
+  const updatedAt = formatDate('yyyy/MM/dd', article.updatedAt)
   return (
     <>
       <Box pb={4}>
