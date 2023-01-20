@@ -5,7 +5,7 @@ import PostBody from '@/components/blog/PostBody'
 import PostHeader from '@/components/blog/PostHeader'
 import { Seo } from '@/components/elements/Seo'
 import Layout from '@/components/layout'
-import { META_TWITTER_CARD_TYPE } from '@/constants/meta'
+import { META_TWITTER_CARD_TYPE } from '@/constants'
 import { microCmsClient } from '@/libs/micro-cms-client'
 import { Article } from '@/types/article'
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
@@ -40,7 +40,7 @@ const Article: NextPage<{ article: Article; isPreview: boolean }> = ({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data: any = await microCmsClient.get({ endpoint: 'blog' })
+  const data = await microCmsClient.get({ endpoint: 'blog' })
 
   const paths = data.contents.map((content: any) => `/articles/${content.id}`)
   return { paths, fallback: 'blocking' }

@@ -1,7 +1,6 @@
 import { NextSeo } from 'next-seo'
 import * as React from 'react'
-import { META_TITLE } from '@/constants'
-import { META_TWITTER_HANDLE } from '@/constants/meta'
+import { META_TITLE, META_TWITTER_HANDLE } from '@/constants'
 
 // パラメータの追加が必要であれば node_module/next-seo/lib/types.d.ts の NextSeoProps を参照して追加する
 const Seo: React.FC<{
