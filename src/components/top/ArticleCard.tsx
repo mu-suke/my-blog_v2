@@ -1,16 +1,8 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  Icon,
-  LinkBox,
-  LinkOverlay,
-  Text,
-} from '@chakra-ui/react'
+import { Box, Flex, HStack, Icon, Text } from '@chakra-ui/react'
 import NextImage from 'next/image'
+import NextLink from 'next/link'
 import React from 'react'
 import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
-import NextLink from '@/components/elements/NextLink'
 import { Article } from '@/types/article'
 
 type ArticleOmittedBody = Omit<Article, 'body'>
@@ -22,28 +14,25 @@ const ArticleCard: React.FC<{ article: ArticleOmittedBody }> = ({
   const updatedAt = new Date(article.updatedAt).toLocaleDateString('ja-JP')
   return (
     <>
-      <LinkBox
+      <Box
         display={'flex'}
         backgroundColor={'white'}
         borderRadius="lg"
         overflow="hidden"
         flexDirection={'column'}
       >
-        <NextImage
-          src={`${article.thumbnail_image.url}?fm=webp`}
-          alt={`「${article.title}」のサムネイル画像`}
-          width={960}
-          height={480}
-        />
-        <Box p={'6'} flexGrow={1}>
-          <NextLink
-            href={'/articles/[id]'}
-            as={`/articles/${article.id}`}
-            passHref
-          >
-            <LinkOverlay color={'system.black'}>{article.title}</LinkOverlay>
-          </NextLink>
-        </Box>
+        <NextLink href={'/articles/[id]'} as={`/articles/${article.id}`}>
+          <NextImage
+            src={`${article.thumbnail_image.url}?fm=webp`}
+            alt={`「${article.title}」のサムネイル画像`}
+            width={960}
+            height={480}
+            priority
+          />
+          <Box p={'6'} flexGrow={1}>
+            <Text>{article.title}</Text>
+          </Box>
+        </NextLink>
         <Flex
           alignItems={'end'}
           flexDirection={'column'}
@@ -64,7 +53,7 @@ const ArticleCard: React.FC<{ article: ArticleOmittedBody }> = ({
             </Text>
           </HStack>
         </Flex>
-      </LinkBox>
+      </Box>
     </>
   )
 }
