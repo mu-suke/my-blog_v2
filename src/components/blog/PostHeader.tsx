@@ -1,12 +1,5 @@
-import {
-  Box,
-  Heading,
-  HStack,
-  Icon,
-  Image,
-  Text,
-  VStack,
-} from '@chakra-ui/react'
+import { Box, Heading, HStack, Icon, Text, VStack } from '@chakra-ui/react'
+import NextImage from 'next/image'
 import React from 'react'
 import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
 import { Article } from '@/types/article'
@@ -20,14 +13,12 @@ const PostHeader: React.FC<{ article: Article; isPreview: boolean }> = ({
   return (
     <>
       <Box pb={4}>
-        <Image
+        <NextImage
           src={`${article.thumbnail_image.url}?fm=webp`}
           alt={`「${article.title}」のサムネイル画像`}
           width={960}
-          maxHeight={{ base: '190px', sm: '260px', md: '340px' }}
-          objectFit={'cover'}
-          borderRadius={'4px'}
-          mb={{ base: 0, md: 2.5 }}
+          height={480}
+          style={{ borderRadius: '4px' }}
         />
         <Heading as="h1" size={{ base: '2xl', md: '3xl' }} py={2.5}>
           {article.title}

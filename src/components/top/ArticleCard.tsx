@@ -3,11 +3,11 @@ import {
   Flex,
   HStack,
   Icon,
-  Image,
   LinkBox,
   LinkOverlay,
   Text,
 } from '@chakra-ui/react'
+import NextImage from 'next/image'
 import React from 'react'
 import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
 import NextLink from '@/components/elements/NextLink'
@@ -29,12 +29,11 @@ const ArticleCard: React.FC<{ article: ArticleOmittedBody }> = ({
         overflow="hidden"
         flexDirection={'column'}
       >
-        <Image
+        <NextImage
           src={`${article.thumbnail_image.url}?fm=webp`}
           alt={`「${article.title}」のサムネイル画像`}
-          maxH={'160px'}
           width={960}
-          objectFit={'cover'}
+          height={480}
         />
         <Box p={'6'} flexGrow={1}>
           <NextLink
