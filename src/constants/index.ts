@@ -1,4 +1,19 @@
 import { PROJECT_NAME } from './common'
-import { META_TITLE } from './meta'
+import {
+  META_TITLE,
+  META_SITE,
+  META_DESCRIPTION,
+  META_OG_IMAGE,
+  META_TWITTER_CARD_TYPE,
+  META_TWITTER_HANDLE,
+} from './meta'
 
-export { PROJECT_NAME, META_TITLE }
+export {
+  PROJECT_NAME,
+  META_TITLE,
+  META_SITE,
+  META_DESCRIPTION,
+  META_OG_IMAGE,
+  META_TWITTER_CARD_TYPE,
+  META_TWITTER_HANDLE,
+}
