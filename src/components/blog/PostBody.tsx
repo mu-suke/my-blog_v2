@@ -10,33 +10,42 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
           'h1, h2, h3, h4, h5': {
             fontWeight: 'bold',
             color: 'system.black',
+            letterSpacing: '.04em',
+            mb: { base: '-15px', md: '-18px' },
           },
           // h1はタイトルで使用しているので実際は使われない
           h1: {
-            fontSize: { base: '2xl', md: '3xl' },
+            fontSize: { base: '1.5rem', md: '2rem' },
           },
+          // heading, textのサイズはnoteを参考にしている
           h2: {
-            fontSize: { base: '3xl', md: '4xl' },
-            borderBottom: '2px solid',
+            fontSize: { base: '1.25rem', md: '1.625rem' },
+            borderBottom: '1px solid',
             borderColor: 'system.gray',
-            mt: '40px',
-            mb: '20px',
-            pb: 0.5,
-            lineHeight: '1.5',
+            pb: { base: '4px', md: '6px' },
+            mt: { base: '45px', md: '54px' },
+            lineHeight: { base: '1.875rem', md: '2.25rem' },
           },
           h3: {
-            fontSize: { base: '2xl', md: '2xl' },
-            my: '28px',
-            lineHeight: '1.5',
+            fontSize: { base: '1.125rem', md: '1.375rem' },
+            mt: { base: '30px', md: '36px' },
+            lineHeight: { base: '1.875rem', md: '2.25rem' },
           },
           'h4, h5': {
-            fontSize: 'xl',
+            mt: { base: '30px', md: '36px' },
+            fontSize: { base: '1rem', md: '1.25rem' },
           },
-          p: { fontSize: 'md', lineHeight: '1.9', color: 'system.black' },
+          p: {
+            color: 'system.black',
+            fontSize: { base: '1rem', md: '1.125rem' },
+            lineHeight: { base: '2', md: '2.25' },
+            my: { base: '30px', md: '36px' },
+          },
           blockquote: {
             borderLeft: '3px solid',
             borderColor: 'system.gray',
             pl: 4,
+            my: { base: '30px', md: '36px' },
           },
           a: {
             fontWeight: 'bold',
@@ -44,10 +53,15 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
           },
           ul: {
             pl: 6,
+            my: { base: '30px', md: '36px' },
+          },
+          'li > ul': {
+            my: 0,
           },
           li: {
             color: 'system.black',
             lineHeight: '1.9',
+            my: { base: '7px', md: '9px' },
           },
           'pre code': {
             backgroundColor: '#2f3232',
@@ -63,6 +77,7 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
           img: {
             objectFit: 'cover',
             borderRadius: 10,
+            my: { base: '30px', md: '36px' },
           },
           '.scroll-table': {
             display: 'block',
@@ -75,6 +90,7 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
             borderCollapse: 'collapse',
             borderSpacing: 0,
             border: '1px solid #ccc',
+            my: { base: '30px', md: '36px' },
           },
           th: {
             backgroundColor: 'gray.100',
