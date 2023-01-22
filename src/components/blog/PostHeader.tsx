@@ -21,7 +21,12 @@ const PostHeader: React.FC<{ article: Article; isPreview: boolean }> = ({
           height={480}
           style={{ borderRadius: '4px' }}
         />
-        <Heading as="h1" size={{ base: '2xl', md: '3xl' }} py={2.5}>
+        <Heading
+          as="h1"
+          fontSize={{ base: '1.5rem', md: '2rem' }}
+          lineHeight={1.5}
+          py={2.5}
+        >
           {article.title}
         </Heading>
         <VStack
