@@ -2,6 +2,7 @@ import { Box, Heading, HStack, Icon, Text, VStack } from '@chakra-ui/react'
 import NextImage from 'next/image'
 import React from 'react'
 import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
+import Tag from '@/components/elements/Tag'
 import { Article } from '@/types/article'
 import { formatDateJst } from '@/utils/formatDate'
 
@@ -13,7 +14,7 @@ const PostHeader: React.FC<{ article: Article; isPreview: boolean }> = ({
   const updatedAt = formatDateJst('yyyy/MM/dd', article.updatedAt)
   return (
     <>
-      <Box pb={4}>
+      <Box mb={{ base: '-15px', md: '-18px' }}>
         <NextImage
           src={`${article.thumbnail_image.url}?fm=webp`}
           alt={`「${article.title}」のサムネイル画像`}
@@ -55,6 +56,11 @@ const PostHeader: React.FC<{ article: Article; isPreview: boolean }> = ({
             </Text>
           </HStack>
         </VStack>
+        <HStack mt={2}>
+          {article.tags.map(tag => (
+            <Tag key={tag.id} id={tag.id} name={tag.name} />
+          ))}
+        </HStack>
       </Box>
     </>
   )
