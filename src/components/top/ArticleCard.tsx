@@ -3,6 +3,7 @@ import NextImage from 'next/image'
 import NextLink from 'next/link'
 import React from 'react'
 import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
+import Tag from '@/components/elements/Tag'
 import { Article } from '@/types/article'
 import { formatDateJst } from '@/utils/formatDate'
 
@@ -34,26 +35,34 @@ const ArticleCard: React.FC<{ article: ArticleOmittedBody }> = ({
             <Text>{article.title}</Text>
           </Box>
         </NextLink>
-        <Flex
-          alignItems={'end'}
-          flexDirection={'column'}
-          justifyContent={'center'}
-          pr={4}
-          pb={2}
-        >
-          <HStack>
-            <Icon as={HiOutlinePencil} />
-            <Text display={'inline-block'} size={'sm'}>
-              {createdAt}
-            </Text>
-          </HStack>
-          <HStack>
-            <Icon as={HiOutlineClock} />
-            <Text display={'inline-block'} size={'sm'}>
-              {updatedAt}
-            </Text>
-          </HStack>
-        </Flex>
+        <HStack>
+          <Flex flexDirection={'row'} flex={1} pl={4}>
+            {article.tags.map(tag => (
+              <Tag key={tag.id} id={tag.id} name={tag.name} />
+            ))}
+          </Flex>
+          <Flex
+            alignItems={'end'}
+            flex={1}
+            flexDirection={'column'}
+            justifyContent={'center'}
+            pr={4}
+            pb={2}
+          >
+            <HStack>
+              <Icon as={HiOutlinePencil} />
+              <Text display={'inline-block'} size={'sm'}>
+                {createdAt}
+              </Text>
+            </HStack>
+            <HStack>
+              <Icon as={HiOutlineClock} />
+              <Text display={'inline-block'} size={'sm'}>
+                {updatedAt}
+              </Text>
+            </HStack>
+          </Flex>
+        </HStack>
       </Box>
     </>
   )

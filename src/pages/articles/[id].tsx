@@ -42,7 +42,9 @@ const Article: NextPage<{ article: Article; isPreview: boolean }> = ({
 export const getStaticPaths: GetStaticPaths = async () => {
   const data = await microCmsClient.get({ endpoint: 'blog' })
 
-  const paths = data.contents.map((content: any) => `/articles/${content.id}`)
+  const paths = data.contents.map(
+    (article: Article) => `/articles/${article.id}`
+  )
   return { paths, fallback: 'blocking' }
 }
 
