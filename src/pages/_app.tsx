@@ -1,12 +1,13 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { DefaultSeo } from 'next-seo'
-import Head from 'next/head'
 import theme from '@/components/theme'
 import {
   META_DESCRIPTION,
   META_OG_IMAGE,
   META_SITE,
   META_TITLE,
+  META_TWITTER_CARD_TYPE,
+  META_TWITTER_HANDLE,
 } from '@/constants'
 import type { AppProps } from 'next/app'
 
@@ -22,16 +23,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           type: 'website',
           locale: 'ja_JP',
         }}
+        twitter={{
+          handle: META_TWITTER_HANDLE,
+          site: META_SITE,
+          cardType: META_TWITTER_CARD_TYPE,
+        }}
       />
-      <Head>
-        <title>{META_TITLE}</title>
-        <meta name="keywords" content={META_TITLE} />
-        <meta name="twitter:title" content={META_TITLE} />
-        <meta name="twitter:image" content={META_OG_IMAGE} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content={META_SITE} />
-        <meta name="twitter:app:country" content="JP" />
-      </Head>
       <Component {...pageProps} />
     </ChakraProvider>
   )
