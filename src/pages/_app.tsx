@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider as ChakraBaseProvider } from '@chakra-ui/provider'
 import { DefaultSeo } from 'next-seo'
 import theme from '@/components/theme'
 import {
@@ -13,7 +13,7 @@ import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraBaseProvider theme={theme}>
       <DefaultSeo
         title={META_TITLE}
         description={META_DESCRIPTION}
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       <Component {...pageProps} />
-    </ChakraProvider>
+    </ChakraBaseProvider>
   )
 }
 

@@ -2,6 +2,7 @@ export const Container = {
   variants: {
     default: {
       maxW: 'container.md',
+      mx: 'auto',
       paddingX: { base: 0, md: '1.5rem' },
       paddingY: {
         base: 0,
@@ -10,6 +11,7 @@ export const Container = {
     },
     lg: {
       maxW: 'container.lg',
+      mx: 'auto',
       paddingX: '1rem',
       paddingY: {
         base: 0,
@@ -18,6 +20,7 @@ export const Container = {
     },
     sm: {
       maxW: 'container.sm',
+      mx: 'auto',
       paddingX: '1rem',
       paddingY: {
         base: '2.5rem',
@@ -26,6 +29,7 @@ export const Container = {
     },
     xs: {
       maxW: 'container.sm',
+      mx: 'auto',
       paddingX: {
         base: '1rem',
         md: '6rem',

@@ -1,6 +1,9 @@
 export const Link = {
   baseStyle: {
     color: 'system.black',
+    transitionProperty: 'common',
+    transitionDuration: 'fast',
+    transitionTimingFunction: 'ease-out',
     _hover: {
       textDecoration: 'none',
       opacity: '0.5',
