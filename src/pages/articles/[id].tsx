@@ -1,11 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Box } from '@chakra-ui/react'
 import { MicroCMSQueries } from 'microcms-js-sdk'
-import PostBody from '@/components/blog/PostBody'
-import PostHeader from '@/components/blog/PostHeader'
-import { Seo } from '@/components/elements/Seo'
+import { Seo } from '@/components/elements'
 import Layout from '@/components/layout'
 import { META_TWITTER_CARD_TYPE } from '@/constants'
+import { Content } from '@/features/articles/containers'
 import { microCmsClient } from '@/libs/micro-cms-client'
 import { Article } from '@/types/article'
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
@@ -23,17 +21,7 @@ const Article: NextPage<{ article: Article; isPreview: boolean }> = ({
         twitterCardType={META_TWITTER_CARD_TYPE}
       />
       <Layout containerVariant={'default'}>
-        <Box
-          backgroundColor={'white'}
-          px={{ base: '1rem', md: '1.5rem' }}
-          py={{
-            base: 4,
-            md: 6,
-          }}
-        >
-          <PostHeader article={article} isPreview={isPreview} />
-          <PostBody body={article.body} />
-        </Box>
+        <Content article={article} isPreview={isPreview} />
       </Layout>
     </>
   )

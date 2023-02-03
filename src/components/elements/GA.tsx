@@ -26,4 +26,4 @@ const GA: React.FC = () => {
   )
 }
 
-export { GA }
+export default GA

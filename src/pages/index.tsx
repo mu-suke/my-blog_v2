@@ -1,7 +1,6 @@
 import { SimpleGrid } from '@chakra-ui/react'
-import { Seo } from '@/components/elements/Seo'
+import { ArticleCard, Seo } from '@/components/elements'
 import Layout from '@/components/layout'
-import ArticleCard from '@/components/top/ArticleCard'
 import { microCmsClient } from '@/libs/micro-cms-client'
 import { Article } from '@/types/article'
 import type { NextPage } from 'next'

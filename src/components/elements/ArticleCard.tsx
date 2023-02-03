@@ -3,7 +3,7 @@ import NextImage from 'next/image'
 import NextLink from 'next/link'
 import React from 'react'
 import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
-import Tag from '@/components/elements/Tag'
+import { Tag } from '@/components/elements'
 import { Article } from '@/types/article'
 import { formatDateJst } from '@/utils/formatDate'
 
