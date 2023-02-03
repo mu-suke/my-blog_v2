@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 
-const PostBody: React.FC<{ body: string }> = ({ body }) => {
+const ArticleBody: React.FC<{ body: string }> = ({ body }) => {
   return (
     <>
       <Box
@@ -122,4 +122,4 @@ const PostBody: React.FC<{ body: string }> = ({ body }) => {
   )
 }
 
-export default PostBody
+export default ArticleBody

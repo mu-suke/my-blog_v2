@@ -6,7 +6,7 @@ import { Tag } from '@/components/elements'
 import { Article } from '@/types/article'
 import { formatDateJst } from '@/utils/formatDate'
 
-const PostHeader: React.FC<{ article: Article; isPreview: boolean }> = ({
+const ArticleHeader: React.FC<{ article: Article; isPreview: boolean }> = ({
   article,
   isPreview,
 }) => {
@@ -66,4 +66,4 @@ const PostHeader: React.FC<{ article: Article; isPreview: boolean }> = ({
   )
 }
 
-export default PostHeader
+export default ArticleHeader

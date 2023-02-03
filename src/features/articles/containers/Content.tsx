@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import { PostBody, PostHeader } from '@/features/articles/presentationals'
+import { ArticleBody, ArticleHeader } from '@/features/articles/presentationals'
 import { Article } from '@/types/article'
 import type React from 'react'
 
@@ -17,8 +17,8 @@ const Content: React.FC<{ article: Article; isPreview: boolean }> = ({
         md: 6,
       }}
     >
-      <PostHeader article={article} isPreview={isPreview} />
-      <PostBody body={article.body} />
+      <ArticleHeader article={article} isPreview={isPreview} />
+      <ArticleBody body={article.body} />
     </Box>
   )
 }
