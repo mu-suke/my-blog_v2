@@ -1,4 +1,4 @@
-import PostBody from './PostBody'
-import PostHeader from './PostHeader'
+import ArticleBody from './ArticleBody'
+import ArticleHeader from './ArticleHeader'
 
-export { PostBody, PostHeader }
+export { ArticleBody, ArticleHeader }
