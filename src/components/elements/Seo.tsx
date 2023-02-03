@@ -79,4 +79,4 @@ const Seo: React.FC<{
   )
 }
 
-export { Seo }
+export default Seo
