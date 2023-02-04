@@ -3,7 +3,8 @@ import { MicroCMSQueries } from 'microcms-js-sdk'
 import { Seo } from '@/components/elements'
 import Layout from '@/components/layout'
 import { META_TWITTER_CARD_TYPE } from '@/constants'
-import { Content } from '@/features/articles/containers'
+import { Content, Sidebar } from '@/features/articles/containers'
+import { MultiColumn } from '@/features/articles/presentationals'
 import { microCmsClient } from '@/libs/micro-cms-client'
 import { Article } from '@/types/article'
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
@@ -20,8 +21,11 @@ const Article: NextPage<{ article: Article; isPreview: boolean }> = ({
         ogImageUrl={article.thumbnail_image.url}
         twitterCardType={META_TWITTER_CARD_TYPE}
       />
-      <Layout containerVariant={'default'}>
-        <Content article={article} isPreview={isPreview} />
+      <Layout containerVariant={'xl'}>
+        <MultiColumn>
+          <Content article={article} isPreview={isPreview} />
+          <Sidebar article={article} />
+        </MultiColumn>
       </Layout>
     </>
   )

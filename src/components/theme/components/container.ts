@@ -9,6 +9,15 @@ export const Container = {
         md: '1.5rem',
       },
     },
+    xl: {
+      maxW: 'container.xl',
+      mx: 'auto',
+      paddingX: { base: 0, md: '1.5rem' },
+      paddingY: {
+        base: 0,
+        md: '1.5rem',
+      },
+    },
     lg: {
       maxW: 'container.lg',
       mx: 'auto',

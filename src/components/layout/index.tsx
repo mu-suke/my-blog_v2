@@ -4,7 +4,7 @@ import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 
 const Layout: React.FC<{
-  containerVariant?: 'xs' | 'sm' | 'lg' | 'default'
+  containerVariant?: 'xs' | 'sm' | 'lg' | 'xl' | 'default'
   isWhiteBg?: boolean
   children: React.ReactNode
 }> = ({ containerVariant = 'default', isWhiteBg = false, children }) => {
