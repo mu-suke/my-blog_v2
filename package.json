@@ -31,8 +31,9 @@
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
     "@next/bundle-analyzer": "13.1.6",
+    "cheerio": "^1.0.0-rc.12",
     "date-fns-tz": "1.3.7",
-    "framer-motion": "7.10.3",
+    "framer-motion": "9.0.1",
     "microcms-js-sdk": "2.2.1",
     "next": "13.1.6",
     "next-seo": "5.15.0",
@@ -49,15 +50,14 @@
     "@typescript-eslint/eslint-plugin": "5.49.0",
     "@typescript-eslint/parser": "5.49.0",
     "eslint": "8.33.0",
-    "eslint-config-next": "12.3.4",
+    "eslint-config-next": "13.1.6",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-import": "2.27.5",
     "husky": "8.0.3",
     "lint-staged": "13.1.0",
-    "microcms-typescript": "1.0.13",
     "next-sitemap": "3.1.48",
     "prettier": "2.8.3",
     "ts-node": "10.9.1",
-    "typescript": "4.8.4"
+    "typescript": "4.9.5"
   }
 }
