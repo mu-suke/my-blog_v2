@@ -23,7 +23,7 @@ const TableOfContents: React.FC<{ tocs: Toc[]; activeId: string }> = ({
       <Text textAlign={'center'} fontWeight={'bold'}>
         目次
       </Text>
-      <List>
+      <List mt={2}>
         {tocs.map(toc => {
           return (
             <ListItem
