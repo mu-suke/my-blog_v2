@@ -3,7 +3,10 @@ import NextLink from 'next/link'
 import { Toc } from '@/features/articles/types'
 import type React from 'react'
 
-const TableOfContents: React.FC<{ tocs: Toc[] }> = ({ tocs }) => {
+const TableOfContents: React.FC<{ tocs: Toc[]; activeId: string }> = ({
+  tocs,
+  activeId,
+}) => {
   return (
     <Box
       bgColor={'system.white'}
@@ -25,6 +28,9 @@ const TableOfContents: React.FC<{ tocs: Toc[] }> = ({ tocs }) => {
           return (
             <ListItem
               key={toc.id}
+              bgColor={
+                toc.id === activeId ? 'system.lightgray' : 'system.white'
+              }
               ml={toc.name === 'h3' ? 4 : 0}
               my={{ base: 0.5, md: 1 }}
             >
