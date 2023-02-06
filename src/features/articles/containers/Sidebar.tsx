@@ -26,7 +26,13 @@ const Sidebar: React.FC<{ article: Article }> = ({ article }) => {
   const { activeId } = useHeadsObserver()
 
   return (
-    <Box as={'aside'} position={'sticky'} top={5}>
+    <Box
+      as={'aside'}
+      position={'sticky'}
+      top={5}
+      mx={{ base: '1rem', lg: 0 }}
+      width={{ base: 'calc(100% - 32px)', lg: '300px' }}
+    >
       <TableOfContents tocs={tocs} activeId={activeId} />
     </Box>
   )
