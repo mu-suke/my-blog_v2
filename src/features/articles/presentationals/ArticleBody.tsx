@@ -70,7 +70,7 @@ const ArticleBody: React.FC<{ body: string }> = ({ body }) => {
             display: 'block',
             overflowX: 'scroll',
             minWidth: '100%',
-            w: '100%',
+            width: '100%',
             px: 4,
             py: 3,
           },
