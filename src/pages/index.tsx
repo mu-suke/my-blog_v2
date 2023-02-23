@@ -1,6 +1,7 @@
 import { SimpleGrid } from '@chakra-ui/react'
 import { ArticleCard, Seo } from '@/components/elements'
 import Layout from '@/components/layout'
+import { ReadMoreButton } from '@/features/top/presentationals'
 import { microCmsClient } from '@/libs/micro-cms-client'
 import { Article } from '@/types/article'
 import type { NextPage } from 'next'
@@ -15,14 +16,17 @@ const Home: NextPage<{ blogList: Article[] }> = ({ blogList }) => {
             return <ArticleCard article={blog} key={index} />
           })}
         </SimpleGrid>
+        <ReadMoreButton />
       </Layout>
     </>
   )
 }
 
 export const getStaticProps = async () => {
+  const limit = 9
   const data = await microCmsClient.get({
     endpoint: 'blog',
+    queries: { limit },
   })
 
   return {

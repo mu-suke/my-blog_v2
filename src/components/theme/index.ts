@@ -1,6 +1,6 @@
 import { extendBaseTheme } from '@chakra-ui/react'
 // eslint-disable-next-line import/no-unresolved
-import { Tag } from '@chakra-ui/theme/components'
+import { Button, Tag } from '@chakra-ui/theme/components'
 import { Container } from '@/components/theme/components/container'
 import { Heading } from '@/components/theme/components/heading'
 import { Link } from '@/components/theme/components/link'
@@ -16,6 +16,7 @@ const overrides = {
   colors,
   sizes,
   components: {
+    Button,
     Container,
     Heading,
     Link,
