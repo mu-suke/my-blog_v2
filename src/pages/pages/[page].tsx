@@ -38,7 +38,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     i => `/pages/${i}`
   )
 
-  return { paths, fallback: 'blocking' }
+  return { paths, fallback: false }
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
