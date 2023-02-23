@@ -110,6 +110,24 @@ const ArticleBody: React.FC<{ body: string }> = ({ body }) => {
             py: '.2em',
             borderRadius: 5,
           },
+          aside: {
+            backgroundColor: '#fff6e4',
+            borderRadius: 10,
+            display: 'flex',
+            px: 4,
+            py: 5,
+          },
+          '.symbol': {
+            borderRadius: '99rem',
+            bgColor: '#ffb84c',
+            color: 'system.white',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            w: '1.4rem',
+            h: '1.4rem',
+            mr: '0.6rem',
+          },
         }}
       >
         <Box
