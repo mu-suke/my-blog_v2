@@ -32,6 +32,11 @@ export default class Document extends NextDocument {
           <meta name="msapplication-TileColor" content="#f3f3f3" />
           <meta name="theme-color" content="#f3f3f3" />
           <GA />
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4662617272797029"
+            crossOrigin="anonymous"
+          ></script>
         </Head>
         <body>
           <Main />
