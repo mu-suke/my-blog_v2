@@ -51,7 +51,7 @@ const ArticleBody: React.FC<{ body: string }> = ({ body }) => {
             fontWeight: 'bold',
             color: 'primary.900',
           },
-          ul: {
+          'ol, ul': {
             pl: 6,
             my: { base: '30px', md: '36px' },
           },
