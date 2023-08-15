@@ -22,6 +22,7 @@ const ArticleCard: React.FC<{ article: ArticleOmittedBody }> = ({
         borderRadius="lg"
         overflow="hidden"
         flexDirection={'column'}
+        justifyContent={'space-between'}
       >
         <NextLink href={'/articles/[id]'} as={`/articles/${article.id}`}>
           <NextImage
