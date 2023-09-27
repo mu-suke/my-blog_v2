@@ -1,5 +1,5 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Center, Container, Heading, Link, SimpleGrid } from '@chakra-ui/react'
+import { Center, Container, Flex, Heading, Link } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import React from 'react'
 
@@ -14,11 +14,10 @@ const Header: React.FC = () => {
               むーすけのブログ
             </Heading>
           </Link>
-          <SimpleGrid
-            columns={{ base: 4, md: 4 }}
-            spacing={{ base: 3, md: 6 }}
+          <Flex
             mt={'1rem'}
             justifyItems={'center'}
+            columnGap={{ base: 3, md: 6 }}
           >
             <Link
               href={'https://github.com/mu-suke'}
@@ -52,7 +51,7 @@ const Header: React.FC = () => {
             >
               Zenn <ExternalLinkIcon ml={'0.25rem'} />
             </Link>
-          </SimpleGrid>
+          </Flex>
         </Center>
       </Container>
     </>
