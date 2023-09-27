@@ -15,9 +15,10 @@ const Header: React.FC = () => {
             </Heading>
           </Link>
           <SimpleGrid
-            columns={{ base: 2, md: 2 }}
-            spacing={{ base: 4, md: 8 }}
+            columns={{ base: 4, md: 4 }}
+            spacing={{ base: 3, md: 6 }}
             mt={'1rem'}
+            justifyItems={'center'}
           >
             <Link
               href={'https://github.com/mu-suke'}
@@ -33,7 +34,23 @@ const Header: React.FC = () => {
               display={'flex'}
               alignItems={'center'}
             >
-              Twitter <ExternalLinkIcon ml={'0.25rem'} />
+              X(Twitter) <ExternalLinkIcon ml={'0.25rem'} />
+            </Link>
+            <Link
+              href={'https://qiita.com/mu-suke08'}
+              isExternal
+              display={'flex'}
+              alignItems={'center'}
+            >
+              Qiita <ExternalLinkIcon ml={'0.25rem'} />
+            </Link>
+            <Link
+              href={'https://zenn.dev/musuke'}
+              isExternal
+              display={'flex'}
+              alignItems={'center'}
+            >
+              Zenn <ExternalLinkIcon ml={'0.25rem'} />
             </Link>
           </SimpleGrid>
         </Center>
