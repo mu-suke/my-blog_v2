@@ -10,6 +10,11 @@
   "prConcurrentLimit": 8,
   "packageRules": [
     {
+      "matchUpdateTypes": ["patch", "pin"],
+      "automerge": true,
+      "addLabels": ["patch", "automerge"]
+    },
+    {
       "packageNames": ["node", "npm"],
       "enabled": false
     },
