@@ -14,6 +14,7 @@ const nextConfig = {
   images: {
     domains: ['images.microcms-assets.io'],
   },
+  output: 'export',
 }
 
 module.exports = withBundleAnalyzer(nextConfig)
