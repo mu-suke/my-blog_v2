@@ -7,10 +7,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const nextConfig = {
   reactStrictMode: true,
+  i18n: {
+    locales: ['ja-JP'],
+    defaultLocale: 'ja-JP',
+  },
   images: {
     domains: ['images.microcms-assets.io'],
   },
-  output: 'export',
 }
 
 module.exports = withBundleAnalyzer(nextConfig)
