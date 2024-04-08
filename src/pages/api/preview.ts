@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { microCmsClient } from '@/libs/micro-cms-client'
 
+export const runtime = 'edge'
 const preview = async (req: NextApiRequest, res: NextApiResponse) => {
   const { draftKey, slug } = req.query
   if (typeof draftKey !== 'string' || typeof slug !== 'string') {
