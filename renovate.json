@@ -10,6 +10,10 @@
   "prConcurrentLimit": 8,
   "packageRules": [
     {
+      "matchUpdateTypes": "major",
+      "addLabels": ["major"]
+    },
+    {
       "matchUpdateTypes": ["patch", "pin"],
       "automerge": true,
       "addLabels": ["patch", "automerge"]
