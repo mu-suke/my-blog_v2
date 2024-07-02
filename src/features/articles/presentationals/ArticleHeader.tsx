@@ -40,7 +40,7 @@ const ArticleHeader: React.FC<{ article: Article; isPreview: boolean }> = ({
         >
           {isPreview && (
             <Text fontWeight={'bold'} color={'red.500'}>
-              現在プレビューモードで閲覧中です
+              {'現在プレビューモードで閲覧中です'}
             </Text>
           )}
           <HStack>
