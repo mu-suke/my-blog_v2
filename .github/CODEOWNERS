@@ -1,0 +1,6 @@
+# All files are by default owned by this user
+@mu-suke
+
+# Don't automatically assign reviewers on pull requests that only modify these files.
+package.json
+package-lock.json
