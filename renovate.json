@@ -1,14 +1,24 @@
 {
-  "extends": ["config:base"],
+  "extends": [
+    "config:base",
+    ":enableVulnerabilityAlertsWithLabel(security)",
+    ":timezone(Asia/Tokyo)"
+  ],
   "baseBranches": ["staging"],
   "timezone": "Asia/Tokyo",
-  "schedule": ["every weekend"],
+  "schedule": ["before 4am"],
   "labels": ["renovate"],
   "rangeStrategy": "pin",
-  "reviewers": ["mu-suke"],
-  "reviewersSampleSize": 1,
-  "prConcurrentLimit": 8,
+  "prConcurrentLimit": 20,
   "packageRules": [
+    {
+      "matchUpdateTypes": "major",
+      "addLabels": ["major"]
+    },
+    {
+      "matchUpdateTypes": "minor",
+      "addLabels": ["minor"]
+    },
     {
       "matchUpdateTypes": ["patch", "pin"],
       "automerge": true,
@@ -19,38 +29,12 @@
       "enabled": false
     },
     {
-      "groupName": "Next.js families",
-      "matchPackagePatterns": ["next"],
-      "matchPackageNames": ["eslint-config-next"]
-    },
-    {
-      "groupName": "Linter families",
-      "matchPackagePatterns": ["eslint", "prettier"]
-    },
-    {
-      "groupName": "React families",
-      "matchPackagePatterns": ["react", "emotion"]
-    },
-    {
-      "groupName": "Chakra-UI families",
-      "matchPackagePatterns": ["chakra"],
-      "matchPackageNames": [
-        "@emotion/react",
-        "@emotion/styled",
-        "framer-motion"
-      ]
-    },
-    {
-      "groupName": "Typescript families",
-      "matchPackageNames": ["typescript", "tsconfig-paths", "ts-loader"]
-    },
-    {
-      "groupName": "MicroCMS families",
-      "matchPackagePatterns": ["microcms"]
-    },
-    {
-      "groupName": "Testing Library React",
-      "matchPackagePatterns": ["@testing-library"]
+      "matchPackagePatterns": ["^@types/"],
+      "automerge": true,
+      "addLabels": ["types", "automerge"],
+      "major": {
+        "automerge": false
+      }
     }
   ]
 }
