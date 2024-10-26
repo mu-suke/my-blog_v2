@@ -42,7 +42,7 @@
     "react-icons": "4.12.0"
   },
   "devDependencies": {
-    "@types/eslint": "8.56.12",
+    "@types/eslint": "9.6.1",
     "@types/node": "18.19.59",
     "@types/prettier": "2.7.3",
     "@types/react": "18.3.12",
