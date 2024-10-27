@@ -26,8 +26,8 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,scss}": "npm run fmt:precommit"
   },
   "dependencies": {
-    "@chakra-ui/icons": "2.0.17",
-    "@chakra-ui/react": "2.4.9",
+    "@chakra-ui/icons": "2.2.4",
+    "@chakra-ui/react": "2.10.3",
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
     "@next/bundle-analyzer": "13.5.7",
