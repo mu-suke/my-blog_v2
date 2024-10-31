@@ -49,7 +49,10 @@ const ArticleBody: React.FC<{ body: string }> = ({ body }) => {
           },
           a: {
             fontWeight: 'bold',
-            color: 'primary.900',
+            color: 'primary.500',
+          },
+          'a:hover': {
+            textDecoration: 'underline',
           },
           'ol, ul': {
             pl: 6,
