@@ -15,6 +15,7 @@ const TableOfContents: React.FC<{ tocs: Toc[]; activeId: string }> = ({
         base: 4,
         lg: 6,
       }}
+      borderRadius={'lg'}
     >
       <Text textAlign={'center'} fontWeight={'bold'}>
         目次

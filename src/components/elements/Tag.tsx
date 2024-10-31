@@ -1,5 +1,8 @@
-import { Box } from '@chakra-ui/react'
-import { Tag as ChakraTag, TagLabel as ChakraTagLabel } from '@chakra-ui/tag'
+import {
+  Box,
+  Tag as ChakraTag,
+  TagLabel as ChakraTagLabel,
+} from '@chakra-ui/react'
 import NextLink from 'next/link'
 import type React from 'react'
 
