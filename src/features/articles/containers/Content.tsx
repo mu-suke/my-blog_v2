@@ -18,6 +18,7 @@ const Content: React.FC<{ article: Article; isPreview: boolean }> = ({
       }}
       maxW={'720px'}
       width={'100%'}
+      borderRadius={'lg'}
     >
       <ArticleHeader article={article} isPreview={isPreview} />
       <ArticleBody body={article.body} />
