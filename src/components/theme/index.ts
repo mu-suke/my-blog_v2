@@ -1,4 +1,4 @@
-import { extendBaseTheme } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
 import { Container } from '@/components/theme/components/container'
 import { Heading } from '@/components/theme/components/heading'
 import { Link } from '@/components/theme/components/link'
@@ -21,4 +21,4 @@ const overrides = {
   },
 }
 
-export default extendBaseTheme(overrides)
+export default extendTheme(overrides)
