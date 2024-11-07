@@ -1,9 +1,9 @@
-import { SimpleGrid } from '@chakra-ui/react'
 import { ArticleCard, Seo } from '@/components/elements'
 import Layout from '@/components/layout'
 import { ReadMoreButton } from '@/features/top/presentationals'
 import { microCmsClient } from '@/libs/micro-cms-client'
-import { Article } from '@/types/article'
+import type { Article } from '@/types/article'
+import { SimpleGrid } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 
 const Home: NextPage<{ blogList: Article[] }> = ({ blogList }) => {

@@ -1,10 +1,10 @@
-import { SimpleGrid } from '@chakra-ui/react'
-import { GetStaticPaths } from 'next'
 import { ArticleCard, Seo } from '@/components/elements'
 import Layout from '@/components/layout'
 import { Pagination } from '@/features/pages/presentationals'
 import { microCmsClient } from '@/libs/micro-cms-client'
-import { Article } from '@/types/article'
+import type { Article } from '@/types/article'
+import { SimpleGrid } from '@chakra-ui/react'
+import type { GetStaticPaths } from 'next'
 import type { NextPage } from 'next'
 
 const Pages: NextPage<{
@@ -35,15 +35,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
     [...Array(end - start + 1)].map((_, i) => start + i)
 
   const paths = createRange(1, Math.ceil(totalCount / perPage)).map(
-    i => `/pages/${i}`
+    i => `/pages/${i}`,
   )
 
   return { paths, fallback: false }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const getStaticProps = async (context: any) => {
-  const page: number = parseInt(context.params.page) ?? 1
+export const getStaticProps = async (context: { params: { page: string } }) => {
+  const page: number = Number.parseInt(context.params.page) ?? 1
   const limit = 9
   const offset = (page - 1) * limit
 

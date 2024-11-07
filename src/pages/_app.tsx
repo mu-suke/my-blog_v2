@@ -1,5 +1,3 @@
-import { ChakraProvider as ChakraBaseProvider } from '@chakra-ui/react'
-import { DefaultSeo } from 'next-seo'
 import theme from '@/components/theme'
 import {
   META_DESCRIPTION,
@@ -9,6 +7,8 @@ import {
   META_TWITTER_CARD_TYPE,
   META_TWITTER_HANDLE,
 } from '@/constants'
+import { ChakraProvider as ChakraBaseProvider } from '@chakra-ui/react'
+import { DefaultSeo } from 'next-seo'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {

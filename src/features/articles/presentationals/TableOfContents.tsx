@@ -1,6 +1,6 @@
+import type { Toc } from '@/features/articles/types'
 import { Box, Link, List, ListItem, Text } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { Toc } from '@/features/articles/types'
 import type React from 'react'
 
 const TableOfContents: React.FC<{ tocs: Toc[]; activeId: string }> = ({

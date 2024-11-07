@@ -1,10 +1,10 @@
-import { Heading, SimpleGrid } from '@chakra-ui/react'
-import { MicroCMSQueries } from 'microcms-js-sdk'
-import { GetStaticPaths, GetStaticProps } from 'next'
 import { ArticleCard, Seo } from '@/components/elements'
 import Layout from '@/components/layout'
 import { microCmsClient } from '@/libs/micro-cms-client'
-import { Article, Tag } from '@/types/article'
+import { type Article, Tag } from '@/types/article'
+import { Heading, SimpleGrid } from '@chakra-ui/react'
+import type { MicroCMSQueries } from 'microcms-js-sdk'
+import type { GetStaticPaths, GetStaticProps } from 'next'
 import type { NextPage } from 'next'
 
 const Tag: NextPage<{ blogList: Article[]; tag: Tag }> = ({

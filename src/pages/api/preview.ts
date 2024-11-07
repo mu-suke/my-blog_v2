@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next'
 import { microCmsClient } from '@/libs/micro-cms-client'
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 export const runtime = 'edge'
 const preview = async (req: NextApiRequest, res: NextApiResponse) => {

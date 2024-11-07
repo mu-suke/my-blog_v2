@@ -1,11 +1,11 @@
+import { Tag } from '@/components/elements'
+import type { Article } from '@/types/article'
+import { formatDateJst } from '@/utils/formatDate'
 import { Box, Flex, HStack, Icon, Text } from '@chakra-ui/react'
 import NextImage from 'next/image'
 import NextLink from 'next/link'
-import React from 'react'
+import type React from 'react'
 import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
-import { Tag } from '@/components/elements'
-import { Article } from '@/types/article'
-import { formatDateJst } from '@/utils/formatDate'
 
 type ArticleOmittedBody = Omit<Article, 'body'>
 

@@ -1,7 +1,7 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Center, Container, Flex, Heading, Link } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import React from 'react'
+import type React from 'react'
 
 const Header: React.FC = () => {
   // TODO(mu-suke): カテゴリやプロフィールができたらSimpleGridのcolumnsを変更する

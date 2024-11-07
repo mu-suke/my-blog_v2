@@ -1,4 +1,3 @@
-import { extendTheme } from '@chakra-ui/react'
 import { Container } from '@/components/theme/components/container'
 import { Heading } from '@/components/theme/components/heading'
 import { Link } from '@/components/theme/components/link'
@@ -7,6 +6,7 @@ import { breakpoints } from '@/components/theme/foundations/breakpoints'
 import { colors } from '@/components/theme/foundations/colors'
 import { sizes } from '@/components/theme/foundations/sizes'
 import { styles } from '@/components/theme/foundations/styles'
+import { extendTheme } from '@chakra-ui/react'
 
 const overrides = {
   breakpoints,

@@ -1,10 +1,10 @@
-import { Box, Heading, HStack, Icon, Text, VStack } from '@chakra-ui/react'
-import NextImage from 'next/image'
-import React from 'react'
-import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
 import { Tag } from '@/components/elements'
-import { Article } from '@/types/article'
+import type { Article } from '@/types/article'
 import { formatDateJst } from '@/utils/formatDate'
+import { Box, HStack, Heading, Icon, Text, VStack } from '@chakra-ui/react'
+import NextImage from 'next/image'
+import type React from 'react'
+import { HiOutlineClock, HiOutlinePencil } from 'react-icons/hi'
 
 const ArticleHeader: React.FC<{ article: Article; isPreview: boolean }> = ({
   article,

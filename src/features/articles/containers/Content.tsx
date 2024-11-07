@@ -1,6 +1,6 @@
-import { Box } from '@chakra-ui/react'
 import { ArticleBody, ArticleHeader } from '@/features/articles/presentationals'
-import { Article } from '@/types/article'
+import type { Article } from '@/types/article'
+import { Box } from '@chakra-ui/react'
 import type React from 'react'
 
 const Content: React.FC<{ article: Article; isPreview: boolean }> = ({

@@ -1,7 +1,7 @@
-import { Box, Container } from '@chakra-ui/react'
-import React from 'react'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
+import { Box, Container } from '@chakra-ui/react'
+import type React from 'react'
 
 const Layout: React.FC<{
   containerVariant?: 'xs' | 'sm' | 'lg' | 'xl' | 'default'

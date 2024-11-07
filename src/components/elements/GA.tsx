@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 
 // @see https://developers.google.cn/analytics/devguides/collection/ga4
 const GA: React.FC = () => {

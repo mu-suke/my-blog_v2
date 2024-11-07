@@ -1,7 +1,7 @@
-import { Box, Heading, Link, Text } from '@chakra-ui/react'
-import NextLink from 'next/link'
 import { Seo } from '@/components/elements'
 import Layout from '@/components/layout'
+import { Box, Heading, Link, Text } from '@chakra-ui/react'
+import NextLink from 'next/link'
 import type React from 'react'
 
 const Custom4040: React.FC = () => {

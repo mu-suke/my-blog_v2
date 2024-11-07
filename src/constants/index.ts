@@ -1,9 +1,9 @@
 import { PROJECT_NAME } from './common'
 import {
-  META_TITLE,
-  META_SITE,
   META_DESCRIPTION,
   META_OG_IMAGE,
+  META_SITE,
+  META_TITLE,
   META_TWITTER_CARD_TYPE,
   META_TWITTER_HANDLE,
 } from './meta'

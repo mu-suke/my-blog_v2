@@ -1,10 +1,10 @@
+import { useHeadsObserver } from '@/features/articles/hooks'
+import { TableOfContents } from '@/features/articles/presentationals'
+import type { Toc } from '@/features/articles/types'
+import type { Article } from '@/types/article'
 import { Box } from '@chakra-ui/react'
 import * as cheerio from 'cheerio'
 import { isText } from 'domhandler'
-import { useHeadsObserver } from '@/features/articles/hooks'
-import { TableOfContents } from '@/features/articles/presentationals'
-import { Toc } from '@/features/articles/types'
-import { Article } from '@/types/article'
 import type React from 'react'
 
 const Sidebar: React.FC<{ article: Article }> = ({ article }) => {

@@ -1,5 +1,5 @@
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 import { GA } from '@/components/elements'
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class Document extends NextDocument {
   render() {
