@@ -35,8 +35,8 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@types/node": "18.19.68",
-    "@types/react": "18.3.14",
-    "@types/react-dom": "18.3.3",
+    "@types/react": "18.3.16",
+    "@types/react-dom": "18.3.5",
     "lefthook": "1.8.5",
     "next-sitemap": "3.1.55",
     "ts-node": "10.9.2",
